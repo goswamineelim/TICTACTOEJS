@@ -4,6 +4,7 @@ let won = false;
 let turns = 0;
 function handleClick(r, c){
     if(!won){
+        if(grid[r][c] == ' ')
         grid[r][c] = player;
         won = checkWin(r,c);
         if(won) document.getElementById("Win").innerHTML = player + " Won";
