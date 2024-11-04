@@ -4,16 +4,17 @@ let won = false;
 let turns = 0;
 function handleClick(r, c){
     if(!won){
-        if(grid[r][c] == ' ')
-        grid[r][c] = player;
-        won = checkWin(r,c);
-        if(won) document.getElementById("Win").innerHTML = player + " Won";
-        turns++;
-        document.getElementById(r+""+c).innerHTML = player;
-        if(player == 'X'){
-            player = 'O';
+        if(grid[r][c] == ' '){
+            grid[r][c] = player;
+            won = checkWin(r,c);
+            if(won) document.getElementById("Win").innerHTML = player + " Won";
+            turns++;
+            document.getElementById(r+""+c).innerHTML = player;
+            if(player == 'X'){
+                player = 'O';
+            }
+            else player = 'X';
         }
-        else player = 'X';
     }
     else if(turns == 9){
         document.getElementById("Win").innerHTML = "It was a Draw";
