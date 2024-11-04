@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3x3 Clickable Grid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <h1 id="Win">Click on a box to play</h1>
+  <div class="grid-container">
+    <!-- 9 Grid items, each one is clickable -->
+    <button class="grid-item left top" id="00" onclick="handleClick(0,0);" tabindex="-1"></button>
+    <button class="grid-item top" id="01" onclick="handleClick(0,1)" tabindex="-1"></button>
+    <button class="grid-item top right" id="02" onclick="handleClick(0,2)" tabindex="-1"></button>
+    <button class="grid-item left" id="10" onclick="handleClick(1,0)" tabindex="-1"></button>
+    <button class="grid-item" id="11" onclick="handleClick(1,1)" tabindex="-1"></button>
+    <button class="grid-item right" id="12" onclick="handleClick(1,2)" tabindex="-1"></button>
+    <button class="grid-item left bottom" id="20" onclick="handleClick(2,0)" tabindex="-1"></button>
+    <button class="grid-item bottom" id="21" onclick="handleClick(2,1)" tabindex="-1"></button>
+    <button class="grid-item bottom right" id="22" onclick="handleClick(2,2)" tabindex="-1"></button>
+  </div>
+  <button class="replay" id="replay" onclick="replay()" tabindex="-1">Replay?</button>
+
+  <script src = "script.js"></script>
+
+</body>
+</html>
